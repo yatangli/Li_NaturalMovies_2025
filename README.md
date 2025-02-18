@@ -1,6 +1,6 @@
 # Li_NaturalMovies_2025
 
-This repository accompanies the article:
+This repository accompanies the following article:
 
 **Li, YT (2025). Characterize Neuronal Responses to Natural Movies in the Mouse Superior Colliculus. Front. Cell. Neurosci.**
 
