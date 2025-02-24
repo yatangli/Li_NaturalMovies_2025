@@ -1201,7 +1201,7 @@ fig_params_example = fig_params.copy()
 fig_params_example['offset'] = 0.04
 fig_params_example['height_sub'] = 18
 # Figure 9, related to Figure 2
-file_save_example_all_corr = folder_figure + 'nm_fig_1C' 
+file_save_example_all_corr = folder_figure + 'nm_fig_1D' 
 ylimit_example = figure_example_temporal_nm(example_all_rois_temporal, example_all_rois_temporal_se, 0.2,
                                  fig_params_example, file_save_example_all_corr, sampling_rate=5)
 
