@@ -871,24 +871,27 @@ plt.colorbar(im, cax=cax)
 if save_fig:
     savefig(folder_figure+'nm_fig_4F')
 plt.show()
+
 #%% Scatter plot for images with types color-coded ***
 
 cluster_label_5_example_density_plot = np.arange(num_type)+1
-# nm_fig_4E
 color_scatter = ['red','magenta','green','blue','cyan']
 image_example_density = 30 #vgat2
 soma_position_example_density,soma_position_5_example_density,cluster_label_5_example_density_plot=scatter_clusters_nm(image_example_density,df_results,neuron,cluster_label_5_example_density_plot)
 fig,ax = plt.subplots(1,1,figsize=(4,4))
-ax.plot(soma_position_example_density[:,0],soma_position_example_density[:,1],'^',color='grey')
 cluster_selected = num_type - np.array([3,4,6,8,9])
-for i in cluster_selected:
-    ax.plot(soma_position_5_example_density[:,i*2],soma_position_5_example_density[:,i*2+1],'^')
+other_idx = np.delete(np.arange(num_type), cluster_selected, axis=0)
+for k,i in enumerate(cluster_selected):
+    ax.plot(soma_position_5_example_density[:,i*2],soma_position_5_example_density[:,i*2+1],'^',color=color_scatter[k])    
+
+for i in other_idx:
+    ax.plot(soma_position_5_example_density[:,i*2],soma_position_5_example_density[:,i*2+1],'^',color='grey')    
+
 ax.set_aspect('equal') 
 ax.legend(['C3','C4','C6','C8','C9'],loc='lower right')
 if save_fig:
     savefig(folder_figure+'nm_fig_4E')       
 plt.show()
-
 
 #%% plot the percentage of neurons with flashing-mapped RFs for each cluster ***
 rf_perc_nm = np.ones(num_type)*np.nan
