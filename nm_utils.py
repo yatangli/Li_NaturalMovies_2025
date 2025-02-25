@@ -29,7 +29,7 @@ fig_height = 18
 #%%
 def savefig(file_save):
     plt.savefig(file_save+'.png',bbox_inches='tight')
-    # plt.savefig(file_save+'.svg',bbox_inches='tight')
+    plt.savefig(file_save+'.svg',bbox_inches='tight')
     # plt.savefig(file_save+'.pdf',bbox_inches='tight')
     
     
