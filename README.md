@@ -13,3 +13,6 @@ This repo contains the code needed to reproduce the figures in the paper.
 
 ## How to find code for a specific figure panel
 * Search for "nm_fig_nX" in `nm_analysis.py`, where "n" is 1,2,3..., "X" is A,B,C,...
+
+## 📜 License
+This project is under the Apache 2.0 License.
